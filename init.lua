@@ -24,14 +24,6 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
-
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -476,7 +468,7 @@ require('lazy').setup({
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
-            local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
+            local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = False })
             vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
               buffer = event.buf,
               group = highlight_augroup,
@@ -803,11 +795,30 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      -- vim.cmd.colorscheme 'catppuccin-mocha'
 
       -- You can configure highlights by doing something like:
       -- vim.cmd.hi('Comment', 'guifg=#FF8800', 'guibg=NONE', 'gui=italic')
       vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+
+  {
+    'morhetz/gruvbox',
+    name = 'gruvbox',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Set the background to dark
+      vim.o.background = 'dark'
+      -- Load the Gruvbox colorscheme
+      vim.cmd.colorscheme 'gruvbox'
+      vim.api.nvim_set_hl(0, 'Normal', { bg = '#000000' })
+      vim.api.nvim_set_hl(0, 'NormalNC', { bg = '#1a1a1a' })
+      -- for lsp highlight
+      vim.api.nvim_set_hl(0, 'LspReferenceText', { bg = '#444444' })
+      vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = '#444444' })
+      vim.api.nvim_set_hl(0, 'LspReferenceWrite', { bg = '#444444' })
     end,
   },
 

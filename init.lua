@@ -162,9 +162,31 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'mbbill/undotree',
-  'ThePrimeagen/harpoon',
   'MunifTanjim/nui.nvim',
   'nvim-lua/plenary.nvim',
+  {
+    'ThePrimeagen/harpoon',
+    config = function()
+      local mark = require 'harpoon.mark'
+      local ui = require 'harpoon.ui'
+
+      -- Key mappings
+      vim.keymap.set('n', '<leader>a', mark.add_file)
+      vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
+      vim.keymap.set('n', '<C-f>', function()
+        ui.nav_file(4)
+      end)
+      vim.keymap.set('n', '<C-t>', function()
+        ui.nav_file(2)
+      end)
+      vim.keymap.set('n', '<C-n>', function()
+        ui.nav_file(3)
+      end)
+      vim.keymap.set('n', '<C-s>', function()
+        ui.nav_file(1)
+      end)
+    end,
+  },
   {
     'lukas-reineke/indent-blankline.nvim',
     version = 'v3.*',

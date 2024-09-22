@@ -7,6 +7,7 @@ require('lazy').setup({
   require 'plugins.tokyo_night_theme',
   require 'plugins.cmp_autocompletion',
   require 'plugins.comment',
+  require 'plugins.comment_generator',
   require 'plugins.gitsigns',
   require 'plugins.conform',
   require 'plugins.harpoon',

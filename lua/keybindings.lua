@@ -59,6 +59,9 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -------------------------------------------
+------- Comment Generator -----------------
+
+vim.keymap.set('n', '<leader>t', '<Plug>(doge-generate)')
 
 -------- Telescope --------------
 local M = {}

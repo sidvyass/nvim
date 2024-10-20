@@ -8,6 +8,9 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+---------- Copy filepath -----------------
+vim.api.nvim_set_keymap('n', '<leader>e', ':let @" = expand("%")<CR>', { desc = 'Copy current filepath', noremap = true, silent = true })
+
 -- Toggle Indent Lines
 vim.api.nvim_set_keymap('n', '<leader>i', ':IBLToggle<CR>', { noremap = true, silent = true })
 
@@ -37,16 +40,6 @@ vim.keymap.set('n', '<C-s>', function()
 end)
 -------------------------------------
 
------------ Comments ----------------
-vim.keymap.del('n', 'gcc')
-vim.keymap.del('v', 'gc')
-vim.keymap.del('n', 'gc')
-
-vim.keymap.set('v', '<C-/>', '<Plug>(comment_toggle_linewise_visual)', { desc = 'Comment out code' })
-vim.keymap.set('n', '<C-/>', '<Plug>(comment_toggle_linewise_current)', { desc = 'Comment out current line in normal mode' })
-
--------------------------------------
-
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -58,8 +51,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--------------------------------------------
-------- Comment Generator -----------------
+------- doc string Generator -----------------
 
 vim.keymap.set('n', '<leader>t', '<Plug>(doge-generate)')
 

@@ -3,18 +3,17 @@ require 'plugins.lazy_nvim'
 
 require('lazy').setup({
   -- require 'plugins.avante',
-  -- require 'plugins.catppuccin_theme',
+  require 'plugins.catppuccin_theme',
   require 'plugins.tokyo_night_theme',
   require 'plugins.cmp_autocompletion',
   require 'plugins.comment',
-  require 'plugins.comment_generator',
+  require 'plugins.doc_string_generator',
   require 'plugins.gitsigns',
   require 'plugins.conform',
   require 'plugins.harpoon',
   require 'plugins.indent_blank_line',
   require 'plugins.lazydev',
   require 'plugins.msc', -- msc plugins that do not have a config yet
-  require 'plugins.mini',
   require 'plugins.neo_tree',
   require 'plugins.nvim_lspconfig',
   require 'plugins.nvim_treesitter',

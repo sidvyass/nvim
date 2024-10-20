@@ -3,7 +3,7 @@ return {
   priority = 1000, -- Make sure to load this before all other start plugins.
   config = function()
     require('tokyonight').setup {
-      style = 'storm', -- Set to 'night' for dark mode. Other options: 'storm', 'moon', 'day'.
+      style = 'moon', -- Set to 'night' for dark mode. Other options: 'storm', 'moon', 'day'.
       transparent = true, -- Enable transparency by not setting a background color.
       terminal_colors = false, -- Set terminal colors (e.g., g:terminal_color_0).
       styles = {

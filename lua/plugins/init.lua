@@ -2,9 +2,8 @@
 require 'plugins.lazy_nvim'
 
 require('lazy').setup({
-  -- require 'plugins.avante',
-  -- require 'plugins.catppuccin_theme',
-  require 'plugins.tokyo_night_theme',
+  require 'plugins.sql_viewer',
+  require 'plugins.lualine',
   require 'plugins.cmp_autocompletion',
   require 'plugins.comment',
   require 'plugins.comment_generator',
@@ -13,14 +12,18 @@ require('lazy').setup({
   require 'plugins.harpoon',
   require 'plugins.indent_blank_line',
   require 'plugins.lazydev',
-  require 'plugins.msc', -- msc plugins that do not have a config yet
-  require 'plugins.mini',
   require 'plugins.neo_tree',
   require 'plugins.nvim_lspconfig',
   require 'plugins.nvim_treesitter',
   require 'plugins.telescope',
   require 'plugins.todo_comments',
   require 'plugins.which_key',
+  require 'plugins.themes',
+  -- require 'plugins.catppuccin_theme',
+  { 'tpope/vim-sleuth' },
+  { 'mbbill/undotree' },
+  { 'MunifTanjim/nui.nvim' },
+  { 'nvim-lua/plenary.nvim' },
   -- lsp configs
   { 'Bilal2453/luvit-meta', lazy = true },
 }, {
@@ -44,3 +47,5 @@ require('lazy').setup({
     },
   },
 })
+
+vim.g.undotree_DiffCommand = 'C:/Program Files/Git/usr/bin/diff.exe'

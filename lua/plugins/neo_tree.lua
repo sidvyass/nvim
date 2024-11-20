@@ -19,6 +19,12 @@ return {
           ['h'] = 'close_node',
           ['s'] = 'open_split',
           ['v'] = 'open_vsplit',
+          ['y'] = function(state)
+            local node = state.tree:get_node() -- Get the selected node in Neo-tree
+            local filepath = node:get_id() -- Get the full file path of the node
+            vim.fn.setreg('+', filepath) -- Copy to clipboard
+            print('Copied file path to clipboard: ' .. filepath)
+          end,
         },
       },
       event_handlers = {

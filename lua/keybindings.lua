@@ -38,12 +38,6 @@ end)
 -------------------------------------
 
 ----------- Comments ----------------
-vim.keymap.del('n', 'gcc')
-vim.keymap.del('v', 'gc')
-vim.keymap.del('n', 'gc')
-
-vim.keymap.set('v', '<C-/>', '<Plug>(comment_toggle_linewise_visual)', { desc = 'Comment out code' })
-vim.keymap.set('n', '<C-/>', '<Plug>(comment_toggle_linewise_current)', { desc = 'Comment out current line in normal mode' })
 
 -------------------------------------
 

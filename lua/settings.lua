@@ -41,3 +41,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_user_command('CopyFilePath', function()
+  local filepath = vim.fn.expand '%:p' -- Get the full file path
+  vim.fn.setreg('+', filepath) -- Copy to clipboard register
+  print('Copied file path to clipboard: ' .. filepath)
+end, {})

@@ -19,6 +19,7 @@ require('lazy').setup({
   require 'plugins.todo_comments',
   require 'plugins.which_key',
   require 'plugins.themes',
+  require 'plugins.toggle_terminal',
   -- require 'plugins.catppuccin_theme',
   { 'tpope/vim-sleuth' },
   { 'mbbill/undotree' },

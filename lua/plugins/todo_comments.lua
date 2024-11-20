@@ -7,7 +7,7 @@ return {
       error = { '#E00909' }, -- fixme, bug, fixit, issue
       warning = { '#FBBF24' }, -- warning
       info = { '#ab1597' }, -- todo
-      hint = { '#194459' }, -- note
+      hint = { '#10B981' }, -- note
       default = { '#7C3AED' }, -- na
       test = { '#129917' }, -- testing, passed, failed
       live = { '#00BFFF' }, -- live (new keyword)

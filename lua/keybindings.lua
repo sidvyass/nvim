@@ -8,6 +8,9 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+--------- Toggle Term ---------------
+vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true, desc = 'Open floating terminal' })
+
 -- Toggle Indent Lines
 vim.api.nvim_set_keymap('n', '<leader>i', ':IBLToggle<CR>', { noremap = true, silent = true })
 
@@ -55,7 +58,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -------------------------------------------
 ------- Comment Generator -----------------
 
-vim.keymap.set('n', '<leader>t', '<Plug>(doge-generate)')
+vim.keymap.set('n', '<leader>d', '<Plug>(doge-generate)')
 
 -------- Telescope --------------
 local M = {}

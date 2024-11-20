@@ -25,46 +25,7 @@ return {
           hl.Normal = { bg = '#000000' }
         end,
       }
-    end,
-  },
-
-  -- Catppuccin configuration
-  {
-    'catppuccin/nvim',
-    priority = 1000,
-    config = function()
-      require('catppuccin').setup {
-        flavour = 'mocha',
-        background = { light = 'latte', dark = 'mocha' },
-        transparent_background = false,
-        term_colors = false,
-        styles = {
-          comments = { 'italic' },
-          functions = {},
-          keywords = {},
-          strings = {},
-          variables = {},
-        },
-        dim_inactive = { enabled = true, shade = 'dark', percentage = 0.15 },
-        color_overrides = {
-          mocha = { base = '#000000', mantle = '#000000', crust = '#000000' },
-        },
-        custom_highlights = {
-          Normal = { bg = '#000000' }, -- Apply pitch black background
-        },
-      }
-      vim.cmd.colorscheme 'catppuccin'
-    end,
-  },
-
-  -- Gruvbox configuration
-  {
-    'gruvbox-community/gruvbox',
-    priority = 1000,
-    config = function()
-      vim.g.gruvbox_contrast_dark = 'medium' -- Ensure darker contrast
-      -- vim.cmd.colorscheme 'gruvbox'
-      vim.api.nvim_set_hl(0, 'Normal', { bg = '#000000' }) -- Set pitch black background
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
 }

@@ -47,3 +47,7 @@ vim.api.nvim_create_user_command('CopyFilePath', function()
   vim.fn.setreg('+', filepath) -- Copy to clipboard register
   print('Copied file path to clipboard: ' .. filepath)
 end, {})
+
+vim.diagnostic.config {
+  virtual_text = true,
+}

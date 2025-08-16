@@ -15,9 +15,9 @@ vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm direction=float<CR>', { norema
 vim.api.nvim_set_keymap('n', '<leader>i', ':IBLToggle<CR>', { noremap = true, silent = true })
 
 -------- Neo-Tree ------------------
-vim.keymap.set('n', '<leader>pv', vim.cmd.Neotree)
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 ------------------------------------
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 ------- for harpoon ----------------
 local mark = require 'harpoon.mark'

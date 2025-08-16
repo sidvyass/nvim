@@ -19,10 +19,10 @@ return {
         dim_inactive = true,
         lualine_bold = true,
         on_colors = function(colors)
-          colors.bg = '#000000' -- Set background to pitch black
+          -- colors.bg = '#000000' -- Set background to pitch black
         end,
         on_highlights = function(hl, c)
-          hl.Normal = { bg = '#000000' }
+          hl.Normal = { bg = 'none' }
         end,
       }
       vim.cmd.colorscheme 'tokyonight'

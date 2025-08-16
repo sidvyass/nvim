@@ -2,11 +2,9 @@
 require 'plugins.lazy_nvim'
 
 require('lazy').setup({
-  require 'plugins.sql_viewer',
   require 'plugins.lualine',
   require 'plugins.cmp_autocompletion',
   require 'plugins.comment',
-  require 'plugins.comment_generator',
   require 'plugins.gitsigns',
   require 'plugins.conform',
   require 'plugins.harpoon',
@@ -22,6 +20,7 @@ require('lazy').setup({
   require 'plugins.toggle_terminal',
   -- require 'plugins.catppuccin_theme',
   { 'tpope/vim-sleuth' },
+  { 'kkoomen/vim-doge' },
   { 'mbbill/undotree' },
   { 'MunifTanjim/nui.nvim' },
   { 'nvim-lua/plenary.nvim' },

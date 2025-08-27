@@ -65,3 +65,5 @@ vim.o.softtabstop = 4
 vim.o.expandtab = true
 
 vim.opt.guicursor = 'a:block'
+
+vim.opt.laststatus = 3

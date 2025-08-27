@@ -3,11 +3,8 @@ return {
   version = '*',
   config = function()
     require('toggleterm').setup {
-      size = 20,
-      direction = 'float',
-      float_opts = {
-        border = 'curved',
-      },
+      size = 50,
+      direction = 'horizontal',
     }
   end,
 }

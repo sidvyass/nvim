@@ -9,7 +9,7 @@ vim.api.nvim_set_keymap(
 )
 
 --------- Toggle Term ---------------
-vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true, desc = 'Open floating terminal' })
+vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm direction=horizontal<CR>', { noremap = true, silent = true, desc = 'Open floating terminal' })
 
 -- Toggle Indent Lines
 vim.api.nvim_set_keymap('n', '<leader>i', ':IBLToggle<CR>', { noremap = true, silent = true })

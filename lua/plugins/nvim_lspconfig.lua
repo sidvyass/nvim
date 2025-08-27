@@ -97,7 +97,6 @@ return {
       clangd = {},
       pyright = {},
       html = {},
-      -- tsserver = {},
       jdtls = {},
 
       emmet_ls = {},

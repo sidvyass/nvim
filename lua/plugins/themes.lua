@@ -1,31 +1,12 @@
 return {
-  -- Tokyonight configuration
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    config = function()
-      require('tokyonight').setup {
-        style = 'storm',
-        transparent = true,
-        terminal_colors = false,
-        styles = {
-          comments = { italic = true },
-          keywords = { italic = false },
-          functions = {},
-          variables = {},
-          sidebars = 'dark',
-          floats = 'dark',
-        },
-        dim_inactive = true,
-        lualine_bold = true,
-        on_colors = function(colors)
-          -- colors.bg = '#000000' -- Set background to pitch black
-        end,
-        on_highlights = function(hl, c)
-          hl.Normal = { bg = 'none' }
-        end,
-      }
-      vim.cmd.colorscheme 'tokyonight'
-    end,
-  },
+  'sainnhe/sonokai',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    -- Optionally configure and load the colorscheme
+    -- directly inside the plugin declaration.
+    vim.g.sonokai_enable_italic = true
+    vim.g.sonokai_better_performance = 1
+    vim.cmd.colorscheme 'sonokai'
+  end,
 }

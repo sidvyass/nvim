@@ -1,12 +1,15 @@
 return {
-  'sainnhe/sonokai',
-  lazy = false,
-  priority = 1000,
+  'vague-theme/vague.nvim',
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other plugins
   config = function()
-    -- Optionally configure and load the colorscheme
-    -- directly inside the plugin declaration.
-    vim.g.sonokai_enable_italic = true
-    vim.g.sonokai_better_performance = 1
-    vim.cmd.colorscheme 'sonokai'
+    -- NOTE: you do not need to call setup if you don't want to.
+    require('vague').setup {
+      style = {
+        strings = 'none',
+        keyword_return = 'none',
+      },
+    }
+    vim.cmd 'colorscheme vague'
   end,
 }

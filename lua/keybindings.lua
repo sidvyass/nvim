@@ -15,7 +15,7 @@ vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm direction=horizontal<CR>', { n
 vim.api.nvim_set_keymap('n', '<leader>i', ':IBLToggle<CR>', { noremap = true, silent = true })
 
 -------- Neo-Tree ------------------
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', vim.cmd.Neotree)
 ------------------------------------
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
@@ -38,14 +38,9 @@ end)
 vim.keymap.set('n', '<C-s>', function()
   ui.nav_file(1)
 end)
--------------------------------------
 
 ----------- Comments ----------------
-
--------------------------------------
-
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 ---------- Switching windows --------------
@@ -55,10 +50,21 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--------------------------------------------
 ------- Comment Generator -----------------
-
 vim.keymap.set('n', '<leader>d', '<Plug>(doge-generate)')
+
+--------- Sidekick -------------
+vim.keymap.set('n', '<Tab>', function()
+  require('sidekick').jump_or_apply()
+end, { desc = 'Sidekick: Jump or Apply Next Edit' })
+
+vim.keymap.set('n', '<leader>pt', function()
+  require('sidekick.cli').toggle()
+end, { desc = 'Sidekick: Toggle CLI' })
+
+vim.keymap.set({ 'n', 'x' }, '<leader>ap', function()
+  require('sidekick.cli').prompt()
+end, { desc = 'Sidekick: Prompt' })
 
 -------- Telescope --------------
 local M = {}

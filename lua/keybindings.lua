@@ -53,19 +53,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 ------- Comment Generator -----------------
 vim.keymap.set('n', '<leader>d', '<Plug>(doge-generate)')
 
---------- Sidekick -------------
-vim.keymap.set('n', '<Tab>', function()
-  require('sidekick').jump_or_apply()
-end, { desc = 'Sidekick: Jump or Apply Next Edit' })
-
-vim.keymap.set('n', '<leader>pt', function()
-  require('sidekick.cli').toggle()
-end, { desc = 'Sidekick: Toggle CLI' })
-
-vim.keymap.set({ 'n', 'x' }, '<leader>ap', function()
-  require('sidekick.cli').prompt()
-end, { desc = 'Sidekick: Prompt' })
-
 -------- Telescope --------------
 local M = {}
 

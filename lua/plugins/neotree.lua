@@ -14,6 +14,16 @@ return {
     lazy = false,
     config = function()
       require('neo-tree').setup {
+        window = {
+          mappings = {
+            ['P'] = {
+              'toggle_preview',
+              config = {
+                use_float = true,
+              },
+            },
+          },
+        },
         event_handlers = {
           {
             event = 'file_opened',

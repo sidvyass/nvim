@@ -17,7 +17,6 @@ require('lazy').setup({
   require 'plugins.themes',
   require 'plugins.toggle_terminal',
   require 'plugins.neotree',
-  -- require 'plugins.sidekick',
   { 'kkoomen/vim-doge' },
   { 'mbbill/undotree' },
   { 'MunifTanjim/nui.nvim' },

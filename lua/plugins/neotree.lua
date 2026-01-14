@@ -18,11 +18,21 @@ return {
           mappings = {
             ['P'] = {
               'toggle_preview',
-              config = {
-                use_float = true,
-              },
+              config = { use_float = true },
             },
           },
+        },
+        filesystem = {
+          follow_current_file = { enabled = true },
+          filtered_items = {
+            visible = true,
+            hide_dotfiles = false,
+            hide_gitignored = false,
+          },
+        },
+        git_status = {
+          enabled = true,
+          show_untracked = true,
         },
         event_handlers = {
           {
@@ -31,6 +41,7 @@ return {
           },
         },
       }
+
       if vim.fn.argc() == 0 then
         vim.cmd 'Neotree'
       end

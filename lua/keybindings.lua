@@ -1,6 +1,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+---- GIT: fugitive -----------
+vim.keymap.set('n', '<leader>lv', vim.cmd.Gdiffsplit)
+
 vim.api.nvim_set_keymap(
   'n',
   '<leader>e', -- Map to <leader>e
